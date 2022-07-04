@@ -23,7 +23,7 @@ const strategy = new Strategy(
 	{
 		clientID: "967504298713944064",
 		clientSecret: "Y1tZ5rFkVC6S0TIQ0IdYDbQyVPykjO5w",
-		callbackURL: "https://violet-abstracted-leo.glitch.me/callback", 
+		callbackURL: "https://rust-equatorial-principle.glitch.me/callback", 
 		scope: ["identify"],
 	},
 	(_access_token, _refresh_token, user, done) =>

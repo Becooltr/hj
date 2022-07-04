@@ -74,7 +74,6 @@ app.get("/discord", (req, res) => {
     res.redirect("discordSunucuLinkiniz") 
 })
 
-app.get("/yonetim",(req,res) => {res.sendFile("./views/main.ejs")})
 
 setInterval(() => {
     mongoose.connect("mongodb+srv://uptimesitesi:123uptimes@cluster0.bkgfewn.mongodb.net/?retryWrites=true&w=majority", function (err,db) {

@@ -6,7 +6,7 @@ const mongoose = require("mongoose");
 const Blog = require("./veri.js");
 const bp = require("body-parser");
 const fetch = require("node-fetch")
-mongoose.connect("mongo_dbURL", { useNewUrlParser: true })
+mongoose.connect("mongodb+srv://uptimesitesi:123uptimes@cluster0.bkgfewn.mongodb.net/?retryWrites=true&w=majority", { useNewUrlParser: true })
     .then(() => console.log("[DATABASE] Veritabanına başarıyla bağlantı sağlandı!"))
     .catch(error => console.log("[DATABASE] Veritabanında hata oluştu!", error.message));
 
@@ -21,9 +21,9 @@ passport.deserializeUser((user, done) => done(null, user));
 
 const strategy = new Strategy(
 	{
-		clientID: "bot_id",
-		clientSecret: "bot_secret",
-		callbackURL: "https://www.pasadorcode.xyz/callback", //callback url'niz
+		clientID: "995045808124727388",
+		clientSecret: "XXVcnq2Jih05_-Ps81YmYwkkjqqhq_ES",
+		callbackURL: "https://outrageous-soft-hen.glitch.me/callback", //callback url'niz
 		scope: ["identify"],
 	},
 	(_access_token, _refresh_token, user, done) =>
@@ -71,12 +71,12 @@ app.get("/cikis", (req, res) => {
   });
 
 app.get("/discord", (req, res) => {
-    res.redirect("discordSunucuLinkiniz") 
+    res.redirect("https://discord.gg/xqJpR8tJ") 
 })
 
 
 setInterval(() => {
-    mongoose.connect("mongo_dbURL", function (err,db) {
+    mongoose.connect("mongodb+srv://uptimesitesi:123uptimes@cluster0.bkgfewn.mongodb.net/?retryWrites=true&w=majority", function (err,db) {
     var uptime = db.collection("uptimes");
     uptime.find({}).toArray(function (err, result){  
       result.forEach(site =>{
